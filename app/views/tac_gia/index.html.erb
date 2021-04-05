@@ -1,0 +1,44 @@
+<div class="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Mã tác giả</th>
+                <th scope="col">Tên tác giả</th>
+                <th scope="col">Website</th>
+                <th scope="col">Ghi chú</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% @tacgia.each do |item| %>
+                <tr>
+                    <th scope="row">
+                        <%= item.id %>
+                    </th>
+                    <td>
+                        <%= item.ma_tac_gia  %>
+                    </td>
+                    <td>
+                        <%= item.ten_tac_gia  %>
+                    </td>
+                    <td>
+                        <%= item.website %>
+                    </td>
+                    <td>
+                        <%= item.note %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+</div>
+<div class="">
+    <%= link_to "Danh mục sách", "/" %>
+</div>
+<div class="">
+    <%= link_to "Thể loại", "/the_loai/index" %>
+</div>
+<div class="">
+    <%= link_to "Nhà xuất bản", "/nha_xuat_ban/index" %>
+</div>

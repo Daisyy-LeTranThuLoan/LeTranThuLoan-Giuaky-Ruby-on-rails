@@ -1,0 +1,35 @@
+<div class="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Mã thể loại</th>
+                <th scope="col">Tên thể loại</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @theloai.each do |item| %>
+                <tr>
+                    <th scope="row">
+                        <%= item.id %>
+                    </th>
+                    <td>
+                        <%= item.ma_the_loai  %>
+                    </td>
+                    <td>
+                        <%= item.ten_the_loai  %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+</div>
+<div class="">
+    <%= link_to "Danh mục sách", "/" %>
+</div>
+<div class="">
+    <%= link_to "Tác giả", "/tac_gia/index" %>
+</div>
+<div class="">
+    <%= link_to "Nhà xuất bản", "/nha_xuat_ban/index" %>
+</div>

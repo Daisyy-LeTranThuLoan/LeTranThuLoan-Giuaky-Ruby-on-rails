@@ -1,0 +1,47 @@
+<div class="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Mã nhà xuất bản</th>
+                <th scope="col">Tên nhà xuất bản</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Email</th>
+                <th scope="col">TT người đại diện</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @nxb.each do |item| %>
+                <tr>
+                    <th scope="row">
+                        <%= item.id %>
+                    </th>
+                    <td>
+                        <%= item.ma_nxb  %>
+                    </td>
+                    <td>
+                        <%= item.ten_nxb  %>
+                    </td>
+                    <td>
+                        <%= item.dia_chi  %>
+                    </td>
+                    <td>
+                        <%= item.email  %>
+                    </td>
+                    <td>
+                        <%= item.thong_tin_nguoi_dai_dien  %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+</div>
+<div class="">
+    <%= link_to "Danh mục sách", "/" %>
+</div>
+<div class="">
+    <%= link_to "Tác giả", "/tac_gia/index" %>
+</div>
+<div class="">
+    <%= link_to "Thể loại", "/the-loai/index" %>
+</div>

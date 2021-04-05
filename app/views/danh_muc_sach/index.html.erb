@@ -1,0 +1,51 @@
+<div class="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Mã sách</th>
+                <th scope="col">Tên sách</th>
+                <th scope="col">Mã tác giả</th>
+                <th scope="col">Mã thể loại</th>
+                <th scope="col">Mã nhà xuất bản</th>
+                <th scope="col">Năm xuất bản</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @danhmucsach.each do |item| %>
+                <tr>
+                    <th scope="row">
+                        <%= item.id %>
+                    </th>
+                    <td>
+                        <%= item.ma_sach %>
+                    </td>
+                    <td>
+                        <%= item.ten_sach %>
+                    </td>
+                    <td>
+                        <%= item.ma_tac_gia %>
+                    </td>
+                    <td>
+                        <%= item.ma_the_loai %>
+                    </td>
+                    <td>
+                        <%= item.ma_nxb %>
+                    </td>
+                    <td>
+                        <%= item.nam_xuat_ban %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+</div>
+<div class="">
+    <%= link_to "Tác giả", "/tac_gia/index" %>
+</div>
+<div class="">
+    <%= link_to "Thể loại", "/the_loai/index" %>
+</div>
+<div class="">
+    <%= link_to "Nhà xuất bản", "/nha_xuat_ban/index" %>
+</div>
